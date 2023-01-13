@@ -86,7 +86,7 @@
       </nav>
       <main class="w-full h-full flex" style="background: #f5f5f5">
         <!-- ======== Sidebar ======== -->
-        <div
+        <div 
           id="sidebar2"
           class="h-full relative border-r border-gray-400 bg-white minWidth"
         >
@@ -202,32 +202,28 @@
               class="flex justify-evenly h-20 border-b border-gray-500 mb-5"
             >
               <div
-                id="teamChat"
-                data-item="item-1"
-                class="flex flex-col justify-center cursor-pointer items-center chatButtons highlightChat chat__btn--active"
+                id="chat_button-1" 
+                class="flex flex-col justify-center cursor-pointer items-center chatButtons highlightChat"
               >
                 <img src="../public/assets/teamChat.svg" alt="" />
                 <p class="text-sm font-semibold text-gray-500">Team Chat</p>
               </div>
               <div
-                id="clientChat"
-                data-item="item-2"
+                id="chat_button-2"
                 class="flex flex-col justify-center cursor-pointer items-center chatButtons"
               >
                 <img src="../public/assets/clientChat.svg" alt="" />
                 <p class="text-sm font-semibold text-gray-500">Client Chat</p>
               </div>
               <div
-                id="newChat"
-                data-item="item-3"
+                id="chat_button-3"
                 class="flex flex-col justify-center cursor-pointer items-center chatButtons"
               >
                 <img src="../public/assets/newChat.svg" alt="" />
                 <p class="text-sm font-semibold text-gray-500">New Chat</p>
               </div>
               <div
-                id="notification"
-                data-item="item-4"
+                id="chat_button-4"
                 class="flex flex-col justify-center cursor-pointer items-center chatButtons"
               >
                 <img src="../public/assets/notification.svg" alt="" />
@@ -240,7 +236,7 @@
             <div id="chatItems">
               <!-- chat_item-1 -->
 
-              <div id="item-1" class="chat__item chat__item--active">
+              <div id="item-1" class="chat_item">
                 <div class="flex justify-center px-10 relative">
                   <i class="material-icons absolute left-0 ml-10 textColor">
                     search
@@ -370,7 +366,7 @@
 
               <!-- chat_item-2 -->
 
-              <div id="item-2" class="chat__item hidden">
+              <div id="item-2" class="chat_item">
                 <div class="flex justify-center px-10 relative">
                   <i class="material-icons absolute left-0 ml-10 textColor">
                     search
@@ -499,13 +495,13 @@
 
               <!-- chat_item-3 -->
 
-              <div id="item-3" class="chat__item hidden">
+              <div id="item-3" class="chat_item">
                 <h2>Chat Item 3</h2>
               </div>
 
               <!-- chat_item-4 -->
 
-              <div id="item-4" class="chat__item hidden">
+              <div id="item-4" class="chat_item">
                 <h2>Chat Item 4</h2>
               </div>
             </div>
