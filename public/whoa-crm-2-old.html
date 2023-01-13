@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM 2</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="global.css" />
+    <script src="index.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="grid grid-cols-1 w-full h-full">
+      <!-- ======== Navbar ======== -->
+      <nav
+        id="header"
+        class="col-span-1 w-full h-16 flex relative items-center whoa2-box-shadow bg-white"
+      >
+        <div>
+          <img
+            class="w-24 mx-10 p-1"
+            src="../public/assets/logo.png"
+            alt="logo"
+          />
+        </div>
+        <div class="flex gap-6 items-center ml-10">
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="w-6 h-6 border rounded-full p-1 font-bold textColor imp-border cursor-pointer"
+              id="menu-btn"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </span>
+          <div>
+            <h3 class="font-semibold whoa2Text">Hi Nimish!</h3>
+            <p class="text-xs text-gray-600">
+              Sumit assigned you a new Task
+            </p>
+          </div>
+        </div>
+        <div class="flex absolute right-0 m-2 gap-2 mr-10">
+          <a href="" class="material-icons bg-white rounded-lg px-2 py-1 shadow-lg small-icons">
+            notifications_none
+          </a>
+          <a href="" class="bg-white rounded-lg px-1 py-1 small-icons border-2 border-teal-600">
+            <img src="../public/assets/user_icon.png" alt="user icon" />
+          </a>
+          <a href="" class="material-icons bg-white rounded-lg px-2 py-1 shadow-lg small-icons">
+            settings
+          </a>
+          <a href="" class="material-icons bg-white rounded-lg px-2 py-1 shadow-lg small-icons">
+            logout
+          </a>
+        </div>
+      </nav>
+      <main class="grid grid-cols-12 w-full h-full" style="background: #f5f5f5;"> 
+        <!-- ======== Sidebar ======== -->
+        <div
+          id="sidebar"
+          class="col-span-4 lg:col-span-2 h-full relative border-r border-gray-400 bg-white"
+        >
+          <p class="text-xs absolute ml-12 mt-3 textColor">
+            Menu
+          </p>
+          <div class="mt-10">
+            <a
+              href=""
+              class="navitems md:justify-start pl-0 md:pl-10"
+            >
+              <i class="material-icons pl-0"> supervised_user_circle </i>
+              <p class="pl-2 hidden md:block darkText p-list">Clients</p>
+            </a>
+
+            <a
+              href=""
+              class="navitems md:justify-start pl-0 md:pl-10"
+            >
+              <i class="material-icons"> account_circle </i>
+              <p class="pl-2 hidden md:block darkText p-list">Leads</p>
+            </a>
+
+            <a
+              href=""
+              class="navitems md:justify-start pl-0 md:pl-10"
+              ><i class="material-icons"> task </i>
+              <p class="pl-2 hidden md:block darkText p-list">Tasks</p>
+            </a>
+
+            <a
+              href=""
+              class="navitems md:justify-start pl-0 md:pl-10"
+              ><i class="material-icons"> calendar_month </i>
+              <p class="pl-2 hidden md:block darkText p-list">Calendar</p>
+            </a>
+
+            <a
+              href="./whoa-crm-1.html"
+              class="navitems md:justify-start pl-0 md:pl-10"
+              ><i class="material-icons"> headset </i>
+              <p class="pl-2 hidden md:block darkText p-list">Support Center</p>
+            </a>
+
+            <a
+              href=""
+              class="navitems md:justify-start pl-0 md:pl-10"
+            >
+              <i class="material-icons"> summarize </i>
+              <p class="pl-2 hidden md:block darkText p-list">To Do list</p>
+            </a>
+
+            <a
+              href=""
+              class="navitems md:justify-start pl-0 md:pl-10"
+            >
+              <i class="material-icons"> schedule </i>
+              <p class="pl-2 hidden md:block darkText p-list">Timesheet</p>
+            </a>
+
+            <a
+              href=""
+              class="navitems md:justify-start pl-0 md:pl-10 active"
+            >
+              <i class="material-icons"> question_answer </i>
+              <p class="pl-2 hidden md:block textColor p-list">Chat</p>
+            </a>
+          </div>
+        </div>
+        <!-- ======== All Chat Users ======== -->
+        <div
+          id="chatSection"
+          class="col-span-8 lg:col-span-4 xl:col-span-3 w-full h-full flex flex-col border-r border-gray-400 bg-white"
+        >
+          <div class="flex justify-between py-5 px-8">
+            <h2 class="font-semibold text-xl darkText">Chat</h2>
+            <!-- New Chat Drop Down -->
+            <div
+                @click.away="openSort = false"
+                class="relative"
+                x-data="{ openSort: false,sortType:'New Chat' }"
+              >
+                <button
+                  @click="openSort = !openSort"
+                  class="flex items-center justify-start w-32 py-1 mt-0 pl-5 text-base font-semibold text-left bg-transparent rounded-md new-chat"
+                >
+                  <span x-text="sortType"></span>
+                  <svg
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    :class="{'rotate-180': openSort, 'rotate-0': !openSort}"
+                    class="w-4 h-4 transition-transform duration-200 transform ml-2"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </button>
+                <div
+                  x-show="openSort"
+                  x-transition:enter="transition ease-out duration-100"
+                  x-transition:enter-start="transform opacity-0 scale-95"
+                  x-transition:enter-end="transform opacity-100 scale-100"
+                  x-transition:leave="transition ease-in duration-75"
+                  x-transition:leave-start="transform opacity-100 scale-100"
+                  x-transition:leave-end="transform opacity-0 scale-95"
+                  class="absolute z-50 w-full origin-top-right"
+                >
+                  <div
+                    class="px-2 pt-2 pb-2 bg-white rounded-md shadow-lg dark-mode:bg-gray-700"
+                  >
+                    <div class="flex flex-col">
+                      <a
+                        @click="sortType='Chat 1',openSort=!openSort"
+                        x-show="sortType != 'Chat 1'"
+                        class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200"
+                        href="#"
+                      >
+                        <div class="">
+                          <p class="font-semibold">Chat 1</p>
+                        </div>
+                      </a>
+
+                      <a
+                        @click="sortType='Chat 2',openSort=!openSort"
+                        x-show="sortType != 'Chat 2'"
+                        class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200"
+                        href="#"
+                      >
+                        <div class="">
+                          <p class="font-semibold">Chat 2</p>
+                        </div>
+                      </a>
+
+                      <a
+                        @click="sortType='Chat 3',openSort=!openSort"
+                        x-show="sortType != 'Chat 3'"
+                        class="flex flex-row items-start rounded-lg bg-transparent p-2 hover:bg-gray-200"
+                        href="#"
+                      >
+                        <div class="">
+                          <p class="font-semibold">Chat 3</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- New Chat D D -->
+          </div>
+          <div class="flex justify-center px-10 relative">
+            <i class="material-icons absolute left-0 ml-10 textColor"> search </i>
+            <input
+              class="bg-transparent border-teal-600 border-b-2 w-full outline-none pl-8 text-teal-600 pb-2"
+              type="search"
+              id="search"
+              name="search"
+              placeholder="Search"
+            />
+          </div>
+          <div class="flex flex-col py-8 px-10 gap-3">
+            <!-- Chat Box 1 -->
+            <a
+              id="chatBox"
+              class="flex justify-start lg:justify-between gap-3 p-3 bg-white relative chatBox"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-10 h-10"
+                  src="../public/assets/user1.png"
+                  alt="user one"
+                />
+                <ul>
+                  <h3 class="text-sm xl:text-base font-semibold">Devon Lane</h3>
+                  <p class="text-xs text-gray-600">
+                    We have lake-front vaction rentals. specific liability.
+                  </p>
+                </ul>
+              </div>
+              <ul
+                class="text-xs text-center gap-4 sm:absolute right-0 sm:mr-5 sm:-mt-2 lg:mt-0 lg:mr-0 lg:static"
+              >
+                <p>11.6</p>
+                <p>6</p>
+                <p class="circle-bg text-white rounded-full">2</p>
+              </ul>
+            </a>
+            <!-- Chat Box 2 -->
+            <a
+              href=""
+              class="flex justify-start lg:justify-between gap-3 p-3 bg-white relative chatBox"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-10 h-10"
+                  src="../public/assets/user2.png"
+                  alt="user one"
+                />
+                <ul>
+                  <h3 class="text-sm xl:text-base font-semibold">
+                    Kathryn Murphy
+                  </h3>
+                  <p class="text-xs text-gray-600">
+                    We have lake-front vaction rentals. specific liability.
+                  </p>
+                </ul>
+              </div>
+              <ul
+                class="text-xs text-center gap-4 sm:absolute right-0 sm:mr-5 sm:-mt-2 lg:mt-0 lg:mr-0 lg:static"
+              >
+                <p>11.6</p>
+                <p>6</p>
+              </ul>
+            </a>
+            <!-- Chat Box 3 -->
+            <a
+              href=""
+              class="flex justify-start lg:justify-between gap-3 p-3 bg-white relative chatBox"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-10 h-10"
+                  src="../public/assets/user3.png"
+                  alt="user one"
+                />
+                <ul>
+                  <h3 class="text-sm xl:text-base font-semibold">
+                    Arlene McCoy
+                  </h3>
+                  <p class="text-xs text-gray-600">
+                    We have lake-front vaction rentals. specific liability.
+                  </p>
+                </ul>
+              </div>
+              <ul
+                class="text-xs text-center gap-4 sm:absolute right-0 sm:mr-5 sm:-mt-2 lg:mt-0 lg:mr-0 lg:static"
+              >
+                <p>11.6</p>
+                <p>6</p>
+              </ul>
+            </a>
+            <!-- Chat Box 4 -->
+            <a
+              href=""
+              class="flex justify-start lg:justify-between gap-3 p-3 bg-white relative chatBox"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-10 h-10"
+                  src="../public/assets/user_group.png"
+                  alt="user one"
+                />
+                <ul>
+                  <h3 class="text-sm xl:text-base font-semibold">
+                    Arlene, Murphy, Lane
+                  </h3>
+                  <p class="text-xs text-gray-600">
+                    We have lake-front vaction rentals. specific liability.
+                  </p>
+                </ul>
+              </div>
+              <ul
+                class="text-xs text-center gap-4 sm:absolute right-0 sm:mr-5 sm:-mt-2 lg:mt-0 lg:mr-0 lg:static"
+              >
+                <p>11.6</p>
+                <p>6</p>
+                <p class="circle-bg text-white rounded-full">2</p>
+              </ul>
+            </a>
+            <!-- Chat Box 5 -->
+            <a
+              href=""
+              class="flex justify-start lg:justify-between gap-3 p-3 bg-white relative chatBox"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-10 h-10"
+                  src="../public/assets/user2.png"
+                  alt="user one"
+                />
+                <ul>
+                  <h3 class="text-sm xl:text-base font-semibold">
+                    Kathryn Murphy
+                  </h3>
+                  <p class="text-xs text-gray-600">
+                    We have lake-front vaction rentals. specific liability.
+                  </p>
+                </ul>
+              </div>
+              <ul
+                class="text-xs text-center gap-4 sm:absolute right-0 sm:mr-5 sm:-mt-2 lg:mt-0 lg:mr-0 lg:static"
+              >
+                <p>11.6</p>
+                <p>6</p>
+              </ul>
+            </a>
+            <!-- Chat Box 6 -->
+            <a
+              href=""
+              class="flex justify-start lg:justify-between gap-3 p-3 bg-white relative chatBox"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-10 h-10"
+                  src="../public/assets/user3.png"
+                  alt="user one"
+                />
+                <ul>
+                  <h3 class="text-sm xl:text-base font-semibold">
+                    Arlene McCoy
+                  </h3>
+                  <p class="text-xs text-gray-600">
+                    We have lake-front vaction rentals. specific liability.
+                  </p>
+                </ul>
+              </div>
+              <ul
+                class="text-xs text-center gap-4 sm:absolute right-0 sm:mr-5 sm:-mt-2 lg:mt-0 lg:mr-0 lg:static"
+              >
+                <p>11.6</p>
+                <p>6</p>
+              </ul>
+            </a>
+            <!-- Chat Box 7 -->
+            <a
+              href=""
+              class="flex justify-start lg:justify-between gap-3 p-3 bg-white relative chatBox"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-10 h-10"
+                  src="../public/assets/user_group.png"
+                  alt="user one"
+                />
+                <ul>
+                  <h3 class="text-sm xl:text-base font-semibold">
+                    Arlene, Murphy, Lane
+                  </h3>
+                  <p class="text-xs text-gray-600">
+                    We have lake-front vaction rentals. specific liability.
+                  </p>
+                </ul>
+              </div>
+              <ul
+                class="text-xs text-center gap-4 sm:absolute right-0 sm:mr-5 sm:-mt-2 lg:mt-0 lg:mr-0 lg:static"
+              >
+                <p>11.6</p>
+                <p>6</p>
+                <p class="circle-bg text-white rounded-full">2</p>
+              </ul>
+            </a>
+            <!-- Chat Box 8 -->
+            <a
+              href=""
+              class="flex justify-start lg:justify-between gap-3 p-3 bg-white relative chatBox"
+            >
+              <div class="flex gap-4">
+                <img
+                  class="w-10 h-10"
+                  src="../public/assets/user3.png"
+                  alt="user one"
+                />
+                <ul>
+                  <h3 class="text-sm xl:text-base font-semibold">
+                    Arlene McCoy
+                  </h3>
+                  <p class="text-xs text-gray-600">
+                    We have lake-front vaction rentals. specific liability.
+                  </p>
+                </ul>
+              </div>
+              <ul
+                class="text-xs text-center gap-4 sm:absolute right-0 sm:mr-5 sm:-mt-2 lg:mt-0 lg:mr-0 lg:static"
+              >
+                <p>11.6</p>
+                <p>6</p>
+              </ul>
+            </a>
+          </div>
+        </div>
+        <!-- ======== Single Chat Section ======== -->
+        <div
+          id="singleChat"
+          class="hidden lg:flex lg:col-span-6 xl:col-span-7 flex-col w-full h-full"
+        >
+          <div class="flex justify-between bg-white py-3 px-5 m-5 rounded-lg w-11/12 mx-auto">
+            <!-- Left part -->
+            <div class="flex items-center gap-4">
+              <img
+                class="w-12 h-12 relative"
+                src="../public/assets/user1.png"
+                alt="user 1"
+              />
+              <div
+                class="w-4 h-4 imp-color border-2 border-white rounded-full absolute m-8 mt-16"
+              ></div>
+              <ul class="relative">
+                <h3>Davon Lane</h3>
+                <p class="text-xs text-gray-500">Last seen 1 day ago</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4 absolute top-0 right-0"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </ul>
+            </div>
+            <!-- Right part -->
+            <div class="flex">
+              <div class="flex items-center">
+                <i class="material-icons p-1 textColor"> search </i>
+                <input
+                  class="w-20 outline-none"
+                  type="search"
+                  id="search"
+                  name="search"
+                  placeholder="search"
+                />
+              </div>
+              <img
+                class="w-8"
+                src="../public/assets/image-rectangle.svg"
+                alt="image icon"
+              />
+            </div>
+          </div>
+          <!-- Each User Messages -->
+          <div
+            class="flex flex-col m-6 border-l-2 border-dashed imp-border pl-3 relative w-11/12 mx-auto"
+          >
+            <a href="">
+              <i
+                class="material-icons absolute right-0 transform -rotate-90 textColor icon-width" style="font-size: 40px;"
+              >
+                arrow_circle_up
+              </i>
+            </a>
+            <!-- date 1 -->
+            <div class="flex flex-col">
+              <div
+                class="w-3 h-3 imp-color border-none rounded-full absolute -m-5" style="margin-top: 0px;"
+              ></div>
+              <p class="ml-2">October 12, 2021, 19:30 PM</p>
+              <div class="flex flex-wrap my-5">
+                <img
+                  class="imgSize m-2"
+                  src="../public/assets/stock_img (7).png"
+                  alt=""
+                />
+                <img
+                  class="imgSize m-2"
+                  src="../public/assets/stock_img (6).png"
+                  alt=""
+                />
+                <img
+                  class="imgSize m-2"
+                  src="../public/assets/stock_img (4).png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- date 2 -->
+            <div class="flex flex-col">
+              <div
+                class="w-3 h-3 imp-color border-none rounded-full absolute -m-5 mt-2"
+              ></div>
+              <p class="ml-2">October 13, 2021, 19:30 PM</p>
+              <div class="flex flex-wrap my-5">
+                <img
+                  class="imgSize m-2"
+                  src="../public/assets/stock_img (5).png"
+                  alt=""
+                />
+                <img
+                  class="imgSize m-2"
+                  src="../public/assets/stock_img (1).png"
+                  alt=""
+                />
+                <img
+                  class="imgSize m-2"
+                  src="../public/assets/stock_img (4).png"
+                  alt=""
+                />
+                <img
+                  class="imgSize m-2"
+                  src="../public/assets/stock_img (3).png"
+                  alt=""
+                />
+                <img
+                  class="imgSize m-2"
+                  src="../public/assets/stock_img (2).png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <!-- date 3 -->
+            <div class="flex flex-col">
+              <div
+                class="w-3 h-3 imp-color border-none rounded-full absolute -m-5 mt-2"
+              ></div>
+              <p class="ml-2">October 12, 2021, 19:30 PM</p>
+              <div class="flex flex-wrap my-5">
+                <img
+                  class="imgSize m-2"
+                  src="../public/assets/stock_img (5).png"
+                  alt=""
+                />
+                <img
+                  class="imgSize m-2"
+                  src="../public/assets/stock_img (1).png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>

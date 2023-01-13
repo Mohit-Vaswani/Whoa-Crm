@@ -1,0 +1,241 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --basic-color: #ffffff;
+  --body-color: #fafcfe;
+  --sidebar-color: #f5f5f5;
+  --container-color: #f9fafb;
+  --box-color: #fafcfe;
+  --primary-color: #019999;
+  --secondary-color: #203b54;
+  --form-text-color: #2e927a;
+  --login-bg: #eff6f7;
+  --green-box: #04947833;
+  --yellow-box: #fec41136;
+  --container-text: #364f65;
+  --gray-color: #787c84;
+  --whoa2-text: #1b2d49;
+  --circle-bg: #2fa285;
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--secondary-color);
+  background: var(--body-color);
+}
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+/*===== Login Form Css =====*/
+
+.login-form {
+  max-width: 500px;
+}
+
+.form-control {
+  height: 50px;
+  box-shadow: 0 0 1px rgb(12 26 75 / 24%), 0 3px 8px -1px rgb(50 50 71 / 5%);
+}
+
+.text-color {
+  color: var(--form-text-color);
+}
+
+.bg-color {
+  background: var(--form-text-color);
+  opacity: 0.9;
+  width: 150px;
+  padding: 8px 0px;
+}
+
+.btn:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(var(--form-text-color)),
+    rgba(var(--form-text-color), 0.8)
+  );
+}
+
+.login-bg {
+  background: var(--login-bg);
+}
+
+/*====== Whoa Crm 1 Css ======*/
+
+.active {
+  border-left: 4px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: rgba(1, 153, 153, 0.3);
+}
+
+#sidebar {
+  min-width: 50px;
+}
+
+.grayColor {
+  color: var(--gray-color);
+}
+
+.textColor {
+  color: var(--primary-color);
+}
+
+.darkText {
+  color: var(--secondary-color);
+}
+
+.main-bg {
+  background: var(--body-color);
+}
+
+.container-bg {
+  background: var(--container-color);
+}
+
+.green-bg {
+  background: var(--yellow-box);
+}
+
+.yellow-bg {
+  background: var(--green-box);
+}
+
+.small-img {
+  width: 60px;
+}
+
+.right-container {
+  color: var(--container-text);
+}
+
+.btn-bg {
+  background: var(--primary-color);
+}
+
+.boxShadow {
+  border: 1px solid #1b2d490d;
+  box-shadow: 6px 25px 80px 0px #3e4e6114;
+}
+
+.small-shadow {
+  box-shadow: 0px 0.48px 0.88px rgba(34, 38, 44, 0.06),
+    0px 6px 12px rgba(34, 38, 44, 0.04), -32px 64px 120px rgba(34, 38, 44, 0.12);
+}
+
+/* Whoa Crm 2 Css */
+
+.imp-color {
+  background: var(--primary-color);
+}
+
+.imp-border {
+  border-color: var(--primary-color);
+}
+
+.small-icons {
+  box-shadow: 0px 2.7618px 5.52361px rgba(34, 38, 44, 0.04),
+    -14.7296px 29.4592px 55.2361px rgba(34, 38, 44, 0.12);
+  border-radius: 10px;
+  font-size: 20px !important;
+  padding-top: 8px;
+  color: var(--primary-color);
+}
+
+.small-icons:hover{
+  border: 2px solid var(--primary-color);
+}
+
+.new-chat {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  outline: none !important;
+}
+
+.whoa2-box-shadow {
+  box-shadow: inset 0px -1px 0px #e2e2ea;
+}
+
+.whoa2Text {
+  color: var(--whoa2-text);
+}
+
+#sidebar2 a:hover {
+  border-left: 4px solid var(--primary-color);
+}
+
+.circle-bg {
+  background: var(--circle-bg);
+  width: 20px;
+  height: 20px;
+}
+
+.chatBox {
+  border: 1px solid rgba(36, 44, 79, 0.05);
+  box-shadow: 8px 26px 60px rgba(183, 186, 199, 0.16);
+  border-radius: 12px;
+}
+
+.icon-width{
+  font-weight: 400 !important;
+}
+
+.imgSize{
+  width: 181px;
+  height: 121px;
+}
+
+.small-sidebar{
+  padding: 1rem;
+}
+
+.animation {
+  position:relative;
+  overflow:hidden;
+  z-index: 1;
+}
+
+.animation:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background : var(--primary-color);
+  left: 0;
+  bottom: 0;
+  transition: all .3s;
+  opacity: 0.3;
+}
+
+.animation:hover:before {
+  width: 100%;
+}
+
+.minWidth {
+  min-width: 250px !important;
+}
+
+.highlightChat{
+  color: var(--primary-color) !important;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+
+@media (max-width: 768px) { 
+  .minWidth {
+    min-width: 60px !important;
+  }
+}
