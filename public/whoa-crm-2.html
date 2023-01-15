@@ -12,7 +12,8 @@
     <script src="../public/js/sidebar.js" defer></script>
     <script src="../public/js/chatbtns.js" defer></script>
     <script src="../public/js/chat&image.js" defer></script>
-    <script src="whoa2.js" defer></script>
+    <script src="../public/js/chatToggle.js" defer></script>
+    <!-- <script src="whoa2.js" defer></script> -->
     <!-- JavaScript -->
     <script src="//unpkg.com/alpinejs" defer></script>
     <link
@@ -202,28 +203,28 @@
               class="flex justify-evenly h-20 border-b border-gray-500 mb-5"
             >
               <div
-                id="chat_button-1" 
+                id="teamChat"
                 class="flex flex-col justify-center cursor-pointer items-center chatButtons highlightChat"
               >
                 <img src="../public/assets/teamChat.svg" alt="" />
                 <p class="text-sm font-semibold text-gray-500">Team Chat</p>
               </div>
               <div
-                id="chat_button-2"
+                id="clientChat"
                 class="flex flex-col justify-center cursor-pointer items-center chatButtons"
               >
                 <img src="../public/assets/clientChat.svg" alt="" />
                 <p class="text-sm font-semibold text-gray-500">Client Chat</p>
               </div>
               <div
-                id="chat_button-3"
+                id="newChat"
                 class="flex flex-col justify-center cursor-pointer items-center chatButtons"
               >
                 <img src="../public/assets/newChat.svg" alt="" />
                 <p class="text-sm font-semibold text-gray-500">New Chat</p>
               </div>
               <div
-                id="chat_button-4"
+                id="notification"
                 class="flex flex-col justify-center cursor-pointer items-center chatButtons"
               >
                 <img src="../public/assets/notification.svg" alt="" />
@@ -236,7 +237,7 @@
             <div id="chatItems">
               <!-- chat_item-1 -->
 
-              <div id="item-1" class="chat_item">
+              <div id="item-1" class="chat_item active-tab">
                 <div class="flex justify-center px-10 relative">
                   <i class="material-icons absolute left-0 ml-10 textColor">
                     search

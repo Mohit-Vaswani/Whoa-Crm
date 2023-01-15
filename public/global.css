@@ -234,11 +234,11 @@ p {
   border-bottom: 2px solid var(--primary-color);
 }
 
-.chat_item {
+.chat_item{
   display: none;
 }
 
-#item-1{
+.active-tab{
   display: block;
 }
 
