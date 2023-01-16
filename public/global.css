@@ -229,9 +229,15 @@ p {
 }
 
 .highlightChat {
-  background: #0199992c;
-  padding: 0 5px;
   border-bottom: 2px solid var(--primary-color);
+}
+
+.highlightChat p{
+  color: var(--primary-color) !important;
+}
+
+.highlightChat .svg{
+  fill: var(--primary-color) !important;
 }
 
 .chat_item{
