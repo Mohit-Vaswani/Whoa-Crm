@@ -248,6 +248,15 @@ p {
   display: block;
 }
 
+.item3{
+  border-radius: 20px;
+}
+
+.item3 a{
+  border-radius: 30px;
+  background: var(--primary-color);
+}
+
 
 @media (max-width: 768px) {
   .minWidth {
