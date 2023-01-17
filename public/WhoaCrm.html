@@ -13,6 +13,7 @@
     <script src="../public/js/chatbtns.js" defer></script>
     <script src="../public/js/chat&image.js" defer></script>
     <script src="../public/js/chatToggle.js" defer></script>
+    <script src="../public/js/search.js" defer></script>
     <!-- <script src="whoa2.js" defer></script> -->
     <!-- JavaScript -->
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -646,15 +647,18 @@
               <!-- Right part -->
               <div class="flex">
                 <div class="flex items-center">
-                  <img src="../public/assets/search.svg" class="w-8 h-8 mr-5"/>
-                  <!-- <i class="material-icons p-1 textColor"> search </i>
                   <input
-                    class="w-20 outline-none"
+                    class="outline-none border-b-2 border-teal-500 w-64 pb-2 hidden" 
                     type="search"
-                    id="search"
+                    id="search-form"
                     name="search"
-                    placeholder="search"
-                  /> -->
+                    placeholder="Find Messages"
+                  /> 
+                  <div id="close-btn" class="hidden">
+                    <span class="material-icons -ml-4 cursor-pointer">close</span>
+                  </div>
+                  <img id="search-btn" src="../public/assets/search.svg" class="w-8 h-8 mr-5 cursor-pointer"/>
+                  <!-- <i class="material-icons p-1 textColor"> search </i>-->
                 </div>
                 <img
                   id="image-icon"
