@@ -191,6 +191,11 @@ p {
   border-radius: 12px;
 }
 
+.chatBox.activeBox{
+  border: 1px solid var(--primary-color);
+  border-bottom: 1px solid rgba(36, 44, 79, 0.05);;
+}
+
 .icon-width {
   font-weight: 400 !important;
 }
