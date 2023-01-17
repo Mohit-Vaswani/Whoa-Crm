@@ -92,10 +92,12 @@ p {
 
 .textColor {
   color: var(--primary-color);
+  font-weight: 400;
 }
 
 .darkText {
   color: var(--secondary-color);
+  font-weight: 400;
 }
 
 .main-bg {
