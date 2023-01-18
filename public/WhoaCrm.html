@@ -31,7 +31,7 @@
       >
         <div id="logo">
           <img
-            class="hidden md:block w-24 mx-10 p-1"
+            class="hidden md:block w-32 mx-10 p-1"
             src="../public/assets/logo.png"
             alt="logo"
           />
@@ -70,7 +70,7 @@
             </svg>
           </span>
           <div>
-            <h3 class="font-semibold whoa2Text">Hi Nimish!</h3>
+            <h3 class="font-medium whoa2Text">Hi Nimish!</h3>
             <p class="text-xs text-gray-600">Sumit assigned you a new Task</p>
           </div>
         </div>
@@ -229,7 +229,7 @@
                     class="svg"
                   ></path>
                 </svg>
-                <p class="text-sm font-semibold text-gray-500">Team Chat</p>
+                <p class="text-xs font-medium text-gray-500">Team Chat</p>
               </div>
               <div
                 id="clientChat"
@@ -251,7 +251,7 @@
                     class="svg"
                   ></path>
                 </svg>
-                <p class="text-sm font-semibold text-gray-500">Client Chat</p>
+                <p class="text-xs font-medium text-gray-500">Client Chat</p>
               </div>
               <div
                 id="newChat"
@@ -273,7 +273,7 @@
                     class="svg"
                   ></path>
                 </svg>
-                <p class="text-sm font-semibold text-gray-500">New Chat</p>
+                <p class="text-xs font-medium text-gray-500">New Chat</p>
               </div>
               <div
                 id="notification"
@@ -295,7 +295,7 @@
                     class="svg"
                   ></path>
                 </svg>
-                <p class="text-sm font-semibold text-gray-500">Notifications</p>
+                <p class="text-xs font-medium text-gray-500">Notifications</p>
               </div>
             </div>
 
@@ -333,7 +333,7 @@
                         <h3 class="text-sm xl:text-base font-semibold">
                           Devon Lane
                         </h3>
-                        <p class="text-sm text-gray-600">
+                        <p class="text-xs text-gray-600">
                           Devon Lane started a new chat.
                         </p>
                       </ul>
@@ -360,7 +360,7 @@
                         <h3 class="text-sm xl:text-base font-semibold">
                           Kathryn Murphy
                         </h3>
-                        <p class="text-sm text-gray-600">
+                        <p class="text-xs text-gray-600">
                           Hello
                         </p>
                       </ul>
@@ -386,7 +386,7 @@
                         <h3 class="text-sm xl:text-base font-semibold">
                           Arlene McCoy
                         </h3>
-                        <p class="text-sm text-gray-600">
+                        <p class="text-xs text-gray-600">
                           Arlene started a new chat.
                         </p>
                       </ul>
@@ -460,7 +460,7 @@
                         <h3 class="text-sm xl:text-base font-semibold">
                           Kathryn Murphy
                         </h3>
-                        <p class="text-sm text-gray-600">
+                        <p class="text-xs text-gray-600">
                           Kathryn Murphy started a new chat
                         </p>
                       </ul>
@@ -486,7 +486,7 @@
                         <h3 class="text-sm xl:text-base font-semibold">
                           Arlene McCoy
                         </h3>
-                        <p class="text-sm text-gray-600">
+                        <p class="text-xs text-gray-600">
                           Hello
                         </p>
                       </ul>
@@ -618,10 +618,10 @@
                 ></div>
                 <ul class="relative">
                   <div>
-                    <h3 class="text-2xl font-semibold text-gray-700">
+                    <h3 class="text-xl font-semibold text-gray-700">
                       Davon Lane
                     </h3>
-                    <p class="text-lg text-gray-500">Online</p>
+                    <p class="text-base text-gray-500">Online</p>
                   </div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -629,7 +629,7 @@
                     viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="w-6 h-6 absolute top-0 right-0 -mr-10 mt-2"
+                    class="w-6 h-6 absolute top-0 right-0 -mr-8"
                   >
                     <path
                       stroke-linecap="round"
@@ -767,10 +767,13 @@
               class="flex flex-col justify-between h-screen"
             >
               <div class="flex flex-col text-center">
-                <p class="font-medium">
+                <p class="font-medium text-base">
                   Nimish Taneja just started a new chat.
                 </p>
-                <p class="text-xs">Today at 12:20 PM</p>
+                <p class="text-xs mt-1">Today at 12:20 PM</p>
+              </div>
+              <div id="message" class="absolute right-0 m-2 mt-12 p-3 w-1/12 bg-teal-200 rounded-lg hidden">
+                <p id="demo-text"></p>
               </div>
               <div class="text-center mb-24">
                 <input
