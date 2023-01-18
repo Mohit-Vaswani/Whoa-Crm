@@ -7,7 +7,7 @@
   --sidebar-color: #f5f5f5;
   --container-color: #f9fafb;
   --box-color: #fafcfe;
-  --primary-color: #019999;
+  --primary-color: #32a842;
   --secondary-color: #203b54;
   --form-text-color: #2e927a;
   --login-bg: #eff6f7;
@@ -79,7 +79,7 @@ p {
 .active {
   border-left: 4px solid var(--primary-color);
   color: var(--primary-color);
-  background-color: rgba(1, 153, 153, 0.3);
+  background-color: #32a84234
 }
 
 #sidebar {
