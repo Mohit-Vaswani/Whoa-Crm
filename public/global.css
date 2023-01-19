@@ -79,7 +79,7 @@ p {
 .active {
   border-left: 4px solid var(--primary-color);
   color: var(--primary-color);
-  background-color: #32a84234
+  background-color: #32a84241
 }
 
 #sidebar {

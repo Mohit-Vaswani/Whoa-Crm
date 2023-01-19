@@ -53,10 +53,10 @@ elements.menuBtn.addEventListener("click", () => {
     elements.sidebarElements.classList.add("hidden");
     elements.sidebarElementsNew.classList.remove("hidden");
     elements.menu.classList.remove("md:ml-12");
-    elements.menu.classList.add("ml-3");
+    elements.menu.classList.add("xl:ml-3");
     elements.logo.classList.add("hidden");
-    elements.navMenu.classList.remove("ml-10");
-    elements.navMenu.classList.add("ml-3");
+    elements.navMenu.classList.remove("md:ml-10");
+    elements.navMenu.classList.add("ml-5");
 });
 
 elements.menuBtn2.addEventListener("click", () => {
@@ -67,9 +67,9 @@ elements.menuBtn2.addEventListener("click", () => {
   elements.sidebar.classList.add("minWidth", "col-span-4", "lg:col-span-2");
   elements.sidebarElements.classList.remove("hidden");
   elements.sidebarElementsNew.classList.add("hidden");
-  elements.menu.classList.add("md:ml-12");
-  elements.menu.classList.remove("ml-3");
+  // elements.menu.classList.add("md:ml-12");
+  elements.menu.classList.remove("xl:ml-3");
   elements.logo.classList.remove("hidden");
-  elements.navMenu.classList.add("ml-10");
-  elements.navMenu.classList.remove("ml-3");
+  elements.navMenu.classList.add("md:ml-10");
+  elements.navMenu.classList.remove("ml-5");
 });
