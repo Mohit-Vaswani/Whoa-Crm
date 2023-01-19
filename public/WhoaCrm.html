@@ -14,6 +14,7 @@
     <script src="../public/js/chat&image.js" defer></script>
     <script src="../public/js/chatToggle.js" defer></script>
     <script src="../public/js/search.js" defer></script>
+    <script src="../public/js/message.js" defer></script>
     <!-- <script src="whoa2.js" defer></script> -->
     <!-- JavaScript -->
     <script src="//unpkg.com/alpinejs" defer></script>
@@ -84,7 +85,7 @@
           <a
             href=""
             class="bg-white rounded-lg px-1 py-1 small-icons border-2"
-            style="border-color: #32a842;"
+            style="border-color: #32a842"
           >
             <img src="../public/assets/user_icon.png" alt="user icon" />
           </a>
@@ -156,7 +157,7 @@
 
             <a href="" class="navitems md:justify-start pl-0 md:pl-4 active">
               <i class="material-icons pl-2 md:pl-0"> question_answer </i>
-              <p class="pl-2 hidden md:block textColor">Chat</p>
+              <p class="pl-2 hidden md:block textColor font">Chat</p>
             </a>
           </div>
           <div class="hidden mt-10" id="sidebar-elements-2">
@@ -316,7 +317,7 @@
                     id="search"
                     name="search"
                     placeholder="Search"
-                    style="border-bottom: 2px solid #32a842; color: #32a842;"
+                    style="border-bottom: 2px solid #32a842; color: #32a842"
                   />
                 </div>
                 <div class="flex flex-col py-8 px-10 gap-3">
@@ -362,9 +363,7 @@
                         <h3 class="text-sm xl:text-base font-semibold">
                           Kathryn Murphy
                         </h3>
-                        <p class="text-xs text-gray-600">
-                          Hello
-                        </p>
+                        <p class="text-xs text-gray-600">Hello</p>
                       </ul>
                     </div>
                     <ul
@@ -488,15 +487,13 @@
                         <h3 class="text-sm xl:text-base font-semibold">
                           Arlene McCoy
                         </h3>
-                        <p class="text-xs text-gray-600">
-                          Hello
-                        </p>
+                        <p class="text-xs text-gray-600">Hello</p>
                       </ul>
                     </div>
                     <ul
                       class="text-xs text-center gap-4 sm:absolute right-0 sm:mr-5 sm:-mt-2 lg:mt-0 lg:mr-0 lg:static"
                     >
-                    <p>6:34 PM</p>
+                      <p>6:34 PM</p>
                       <!-- <p>6</p> -->
                     </ul>
                   </a>
@@ -612,7 +609,7 @@
               <div class="flex items-center gap-4">
                 <img
                   class="w-16 h-16 relative"
-                  src="../public/assets/user1.png"
+                  src="../public/assets/user1.svg"
                   alt="user 1"
                 />
                 <div
@@ -650,17 +647,23 @@
               <div class="flex">
                 <div class="flex items-center">
                   <input
-                    class="outline-none border-b-2 w-64 pb-2 hidden" 
-                    style="border-color: #32a842;"
+                    class="outline-none border-b-2 w-64 pb-2 hidden"
+                    style="border-color: #32a842"
                     type="search"
                     id="search-form"
                     name="search"
                     placeholder="Find Messages"
-                  /> 
+                  />
                   <div id="close-btn" class="hidden">
-                    <span class="material-icons -ml-4 cursor-pointer">close</span>
+                    <span class="material-icons -ml-4 cursor-pointer"
+                      >close</span
+                    >
                   </div>
-                  <img id="search-btn" src="../public/assets/search.svg" class="w-8 h-8 mr-5 cursor-pointer"/>
+                  <img
+                    id="search-btn"
+                    src="../public/assets/search.svg"
+                    class="w-8 h-8 mr-5 cursor-pointer"
+                  />
                   <!-- <i class="material-icons p-1 textColor"> search </i>-->
                 </div>
                 <img
@@ -775,24 +778,35 @@
                 </p>
                 <p class="text-xs mt-1">Today at 12:20 PM</p>
               </div>
-              <div id="message" class="absolute right-0 m-2 mt-12 p-3 w-1/12 bg-teal-200 rounded-lg hidden">
-                <p id="demo-text"></p>
-              </div>
+              <!-- For Demo Message -->
+
+              <div class="rounded-lg absolute right-0 mt-10 mr-10 text-white" id="demoText" style="background: #32a842;"></div>
+
               <div class="text-center mb-24">
                 <input
+                  id="inputMsg"
                   type="text"
-                  class="w-11/12 py-4 px-2 chatBox outline-none relative"
+                  class="w-11/12 py-4 px-2 pl-4 chatBox outline-none relative placeholder-gray-600"
                   placeholder="Write your message..."
                 />
-                <div class="flex items-center gap-3 absolute right-0 -mt-12 mr-16">
+                <div
+                  class="flex items-center gap-3 absolute right-0 -mt-12 mr-16"
+                >
                   <a href="">
                     <img src="../public/assets/smile.svg" />
                   </a>
                   <a href="">
                     <img src="../public/assets/source.svg" />
                   </a>
-                  <button type="submit" class="px-2 py-1 rounded-lg hover:text-white" style="background: #32a842;">
-                    <span class="material-icons transform -rotate-45">send</span>
+                  <button
+                    type="submit"
+                    class="px-2 py-1 rounded-lg text-white hover:text-gray-300"
+                    style="background: #32a842"
+                    id="msgSubmit"
+                  >
+                    <span class="material-icons transform -rotate-45"
+                      >send</span
+                    >
                   </button>
                 </div>
               </div>

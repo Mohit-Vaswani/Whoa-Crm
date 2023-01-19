@@ -92,7 +92,7 @@ p {
 
 .textColor {
   color: var(--primary-color);
-  font-weight: 400;
+  font-weight: 100;
 }
 
 .darkText {
@@ -187,8 +187,8 @@ p {
 }
 
 .chatBox {
-  border: 1px solid rgba(36, 44, 79, 0.05);
-  box-shadow: 8px 26px 60px rgba(183, 186, 199, 0.16);
+  border: 1px solid #f4f5f6;
+  box-shadow: 6px 25px 100px rgb(23 65 114 / 4%);
   border-radius: 12px;
 }
 
@@ -265,6 +265,9 @@ p {
   background: var(--primary-color);
 }
 
+::placeholder{
+  font-size: 14px;
+}
 
 @media (max-width: 768px) {
   .minWidth {
