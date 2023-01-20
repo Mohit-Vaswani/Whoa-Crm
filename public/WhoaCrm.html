@@ -24,7 +24,7 @@
     />
   </head>
   <body>
-    <section class="grid grid-cols-1 w-full h-full">
+    <section class="grid grid-cols-1 w-full h-screen">
       <!-- ======== Navbar ======== -->
       <nav
         id="header"
@@ -778,9 +778,29 @@
                 </p>
                 <p class="text-xs mt-1">Today at 12:20 PM</p>
               </div>
-              <!-- For Demo Message -->
 
-              <div class="rounded-lg absolute right-0 mt-10 mr-10 text-white" id="demoText" style="background: #32a842;"></div>
+              <!-- Messages -->
+
+              <div id="messages" class="px-10 relative h-full">
+                <!-- Text-1 -->
+                <div class="flex">
+                  <!-- <img src="../public/assets/user1.svg" alt=""> -->
+                  <div class="absolute top-0 pt-10">
+                    <p class="py-2 px-1 border bg-white text-center rounded-full">Hi Mr. Nimish</p>
+                    <p class="text-xs pl-2 pt-1">Davon Lane, 4:44 PM</p>
+                  </div>
+                  <div class="absolute top-0 right-0 pt-32 pr-10">
+                    <!-- <p class="py-2 px-1 border bg-white text-center rounded-full">Hi Mr. Nimish</p> -->
+                    <img src="../public/assets/books.jpg" alt="" width="320px" class="rounded-lg">
+                    <p class="text-xs pl-2 pt-1 text-right">You, 5:04 PM</p>
+                  </div>
+                  <div class="absolute top-0 pt-10">
+                    <p class="py-2 px-1 border bg-white text-center rounded-full">Hi Mr. Nimish</p>
+                    <p class="text-xs pl-2 pt-1">Davon Lane, 4:44 PM</p>
+                  </div>
+                </div>
+              </div>
+
 
               <div class="text-center mb-24">
                 <input
