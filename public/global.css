@@ -139,6 +139,11 @@ p {
     0px 6px 12px rgba(34, 38, 44, 0.04), -32px 64px 120px rgba(34, 38, 44, 0.12);
 }
 
+.sidebar-list a:hover {
+  border-left: 4px solid var(--primary-color);
+}
+
+
 /* Whoa Crm 2 Css */
 
 .imp-color {
