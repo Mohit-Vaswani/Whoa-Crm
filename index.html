@@ -64,13 +64,14 @@
         let email = document.getElementById("email").value;
         let password = document.getElementById("password").value;
 
-        if(email=="admin@gmail.com" && password=="123456"){
+        if(email && password){
           window.location.assign("./public/WhoaCrm.html");
           alert("Login Successful");
         } 
         else{
-          alert("Invalid Information")
-          return;
+          alert("Please enter email and password");
+          // alert("Invalid Information")
+          // return;
         }
       }
     </script>
