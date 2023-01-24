@@ -341,7 +341,7 @@
               <span class="material-icons pr-3 text-black opacity-25">
                 notifications
               </span>
-              <p class="text-base font-semibold">Customer Name : Brade Hodge</p>
+              <p class="text-sm font-semibold">Customer Name : Brade Hodge</p>
             </div>
             <!-- 2 -->
             <div
@@ -350,7 +350,7 @@
               <span class="material-icons pr-3 text-black opacity-25">
                 event_busy
               </span>
-              <p class="text-base font-semibold">Support Type :</p>
+              <p class="text-sm font-semibold">Support Type :</p>
               <!-- Drop down start -->
               <div
                 @click.away="openSort = false"
@@ -434,7 +434,7 @@
               <span class="material-icons pr-3 text-black opacity-25">
                 notifications
               </span>
-              <p class="text-base font-semibold">Status : Open</p>
+              <p class="text-sm font-semibold">Status : Open</p>
             </div>
             <!-- 4 -->
             <div
@@ -443,7 +443,7 @@
               <span class="material-icons pr-3 text-black opacity-25">
                 notifications
               </span>
-              <p class="text-base font-semibold">Priority : Medium</p>
+              <p class="text-sm font-semibold">Priority : Medium</p>
             </div>
             <!-- 5 -->
             <div
@@ -452,7 +452,7 @@
               <span class="material-icons pr-3 text-black opacity-25">
                 people_alt
               </span>
-              <p class="text-base font-semibold">Ticket Owner :</p>
+              <p class="text-sm font-semibold">Ticket Owner :</p>
               <!-- Drop down start -->
               <div
                 @click.away="openSort = false"
@@ -536,7 +536,7 @@
               <span class="material-icons pr-3 text-black opacity-25">
                 event_busy
               </span>
-              <p class="text-base font-semibold">Start Date : 05/11/2021</p>
+              <p class="text-sm font-semibold">Start Date : 05/11/2021</p>
             </div>
             <!-- 7 -->
             <div
@@ -545,7 +545,7 @@
               <span class="material-icons pr-3 text-black opacity-25">
                 event_busy
               </span>
-              <p class="text-base font-semibold">Due Date : 07/11/2022</p>
+              <p class="text-sm font-semibold">Due Date : 07/11/2022</p>
             </div>
             <!-- 8 -->
             <div
@@ -554,7 +554,7 @@
               <span class="material-icons pr-3 text-black opacity-25">
                 event_busy
               </span>
-              <p class="text-base font-semibold flex">
+              <p class="text-sm font-semibold flex">
                 Channel :
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -595,7 +595,7 @@
         class="modal hidden fixed z-10 pt-10 pb-10 left-0 top-0 w-full h-screen overflow-auto"
       >
         <!-- Modal content -->
-        <div class="bg-white m-auto border border-white w-3/4 h-full">
+        <div class="modal-content bg-white m-auto border border-white h-screen">
           <!-- <span class="close">&times;</span> -->
           <main class="col-span-10 main-bg">
             <div
@@ -604,10 +604,12 @@
             >
               <!-- Left Container -->
               <div
-                class="col-span-1 xl:col-span-7 2xl:col-span-8 bg-white pl-10 pt-6 pr-10"
+                class="col-span-1 xl:col-span-7 2xl:col-span-7 bg-white pl-10 pt-6 pr-10"
               >
-                <h4 class="text-sm font-semibold mb-6 underline">Task No. R1-182</h4>
-                <h2 class="text-lg font-semibold mb-3">
+                <h4 class="text-sm font-semibold mb-5 underline">
+                  Task No. R1-182
+                </h4>
+                <h2 class="text-xl font-semibold mb-3">
                   Task Title : User will be able to add up the description here.
                 </h2>
 
@@ -678,30 +680,31 @@
                   <h4 class="font-semibold text-base mt-8 mb-4">Uploads</h4>
                   <div class="flex gap-6">
                     <div class="flex flex-col text-right">
-                      <img src="../public/assets/u (1).png" alt="">
+                      <img src="../public/assets/u (1).png" alt="" />
                       <p class="text-sm">3 days ago</p>
                     </div>
                     <div class="flex flex-col text-right">
-                      <img src="../public/assets/u (3).png" alt="">
+                      <img src="../public/assets/u (3).png" alt="" />
                       <p class="text-sm">3 days ago</p>
                     </div>
                     <div class="flex flex-col text-right">
-                      <img src="../public/assets/u (2).png" alt="">
+                      <img src="../public/assets/u (2).png" alt="" />
                       <p class="text-sm">3 days ago</p>
                     </div>
                   </div>
                 </div>
 
-                <!-- Text Info -->
+                <!-- Comments & History Container -->
 
-                <h2 class="text-lg font-semibold">Ticket Info.</h2>
+                <div class="mt-16">
+                  <div class="flex gap-5">
+                    <h3 class="pb-2 highlightComment">Comments</h3>
+                    <h3>History</h3>
+                  </div>
+                </div>
 
                 <!-- Box 1 -->
-                <div
-                  class="w-full flex flex-col md:flex-row gap-5 rounded-md p-5 px-8 mt-2 relative"
-                  id="box-1"
-                  style="background: #fafcfe"
-                >
+                <div class="w-full flex pt-5">
                   <div>
                     <img
                       class="rounded-full w-12"
@@ -709,64 +712,63 @@
                       alt="User 1"
                     />
                   </div>
-                  <div>
-                    <ul class="flex flex-col sm:flex-row gap-0 sm:gap-4 pb-1">
-                      <h5 class="text-base font-semibold">Dustin Rivest</h5>
-                      <p class="text-base font-normal">
-                        October 11, 2021, 15:30 PM
-                      </p>
-                    </ul>
-                    <p class="text-base w-11/12">
-                      Apple has cut back production of iPad tablets to allocate
-                      more components to the iPhone 13.
-                    </p>
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    class="boxShadow ml-4 w-full p-2 pb-16 relative"
+                    placeholder="Add Your Comment"
+                  />
+                  <div
+                    class="flex items-center gap-3 absolute p-2"
+                    style="margin-left: 35.5rem"
+                  >
+                    <a href="">
+                      <img src="../public/assets/source.svg" />
+                    </a>
+                    <button
+                      type="submit"
+                      class="p-1 pb-2 px-2 rounded-lg text-white hover:text-gray-300"
+                      style="background: #32a842"
+                      id="msgSubmit"
+                    >
+                      <span class="material-icons transform -rotate-45"
+                        >send</span
+                      >
+                    </button>
                   </div>
-                  <ul class="absolute flex gap-3 right-0 top-0 m-3 pr-3">
-                    <a href="#" class="">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="w-6 h-6 bg-white p-1 rounded-sm small-shadow"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10"
-                        />
-                      </svg>
-                    </a>
-                    <a href="#">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="w-6 h-6 bg-white p-1 rounded-sm small-shadow"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0"
-                        />
-                      </svg>
-                    </a>
-                  </ul>
+                </div>
+                <div class="flex gap-2 pl-16">
+                  <button
+                  class="text-white btn-bg pt-2 pb-2 px-4 rounded-md mt-3 flex items-center justify-center gap-2 text-sm"
+                >
+                  <img
+                    src="../public/assets/share.svg"
+                    alt="share"
+                    class="w-5"
+                  />
+                  Edit/Save
+                </button>
+                  <button
+                  class="text-white pt-2 pb-2 px-4 rounded-md mt-3 flex items-center justify-center gap-1 text-sm cancelBtn"
+                >
+                <i class="material-icons" style="font-size: 20px;">
+                  block
+                  </i>
+                  Cancel
+                </button>
                 </div>
                 <!-- Box 2 -->
                 <div
-                  class="w-full flex flex-col md:flex-row gap-5 rounded-md p-5 px-8 mt-2 mb-5 relative"
+                  class="w-full flex flex-col md:flex-row gap-5 rounded-md mt-8 mb-5 relative"
                   id="box-1"
-                  style="background: #fafcfe"
                 >
                   <div>
                     <img
-                      class="rounded-full w-12"
+                      class="rounded-full"
                       src="./assets/user-1.png"
                       alt="User 1"
+                      style="width: 56px"
                     />
                   </div>
                   <div>
@@ -781,7 +783,7 @@
                       more components to the iPhone 13.
                     </p>
                   </div>
-                  <ul class="absolute flex gap-3 right-0 top-0 m-3 pr-3">
+                  <ul class="absolute flex gap-3 right-0 top-0 m-3 pr-3 mt-0">
                     <a href="#" class="">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -819,9 +821,27 @@
               </div>
 
               <!-- Right Container -->
+
               <div
-                class="col-span-1 xl:col-span-4 2xl:col-span-3 flex flex-col items-center pt-5 gap-2 right-container border-l-2 border-gray-100"
+                class="col-span-1 xl:col-span-4 2xl:col-span-4 flex flex-col items-center px-4 pt-16 gap-2 right-container border-l-2 border-gray-100 relative bg-white"
               >
+                <!-- Delete Btn -->
+                <div
+                  id="deleteDot"
+                  class="absolute bg-white right-0 top-0 m-4 rounded-sm border border-gray-300 cursor-pointer"
+                >
+                  <a>
+                    <i class="material-icons"> more_vert </i>
+                  </a>
+                </div>
+                <div
+                  id="deleteBtn"
+                  class="absolute bg-white right-0 top-0 m-4 mt-12 px-4 py-1 rounded-sm border border-gray-300 hidden"
+                >
+                  <a id="myModalBtn" class="cursor-pointer close">
+                    <p>Delete task</p>
+                  </a>
+                </div>
                 <!-- 1 -->
                 <div
                   class="container-bg py-4 w-11/12 rounded-md flex justify-start items-center pl-5"
@@ -829,7 +849,7 @@
                   <span class="material-icons pr-3 text-black opacity-25">
                     notifications
                   </span>
-                  <p class="text-base font-semibold">
+                  <p class="text-sm font-semibold">
                     Customer Name : Brade Hodge
                   </p>
                 </div>
@@ -840,7 +860,7 @@
                   <span class="material-icons pr-3 text-black opacity-25">
                     event_busy
                   </span>
-                  <p class="text-base font-semibold">Support Type :</p>
+                  <p class="text-sm font-semibold">Support Type :</p>
                   <!-- Drop down start -->
                   <div
                     @click.away="openSort = false"
@@ -924,7 +944,7 @@
                   <span class="material-icons pr-3 text-black opacity-25">
                     notifications
                   </span>
-                  <p class="text-base font-semibold">Status : Open</p>
+                  <p class="text-sm font-semibold">Status : Open</p>
                 </div>
                 <!-- 4 -->
                 <div
@@ -933,7 +953,7 @@
                   <span class="material-icons pr-3 text-black opacity-25">
                     notifications
                   </span>
-                  <p class="text-base font-semibold">Priority : Medium</p>
+                  <p class="text-sm font-semibold">Priority : Medium</p>
                 </div>
                 <!-- 5 -->
                 <div
@@ -942,7 +962,7 @@
                   <span class="material-icons pr-3 text-black opacity-25">
                     people_alt
                   </span>
-                  <p class="text-base font-semibold">Ticket Owner :</p>
+                  <p class="text-sm font-semibold">Ticket Owner :</p>
                   <!-- Drop down start -->
                   <div
                     @click.away="openSort = false"
@@ -1026,7 +1046,7 @@
                   <span class="material-icons pr-3 text-black opacity-25">
                     event_busy
                   </span>
-                  <p class="text-base font-semibold">Start Date : 05/11/2021</p>
+                  <p class="text-sm font-semibold">Start Date : 05/11/2021</p>
                 </div>
                 <!-- 7 -->
                 <div
@@ -1035,7 +1055,7 @@
                   <span class="material-icons pr-3 text-black opacity-25">
                     event_busy
                   </span>
-                  <p class="text-base font-semibold">Due Date : 07/11/2022</p>
+                  <p class="text-sm font-semibold">Due Date : 07/11/2022</p>
                 </div>
                 <!-- 8 -->
                 <div
@@ -1044,7 +1064,7 @@
                   <span class="material-icons pr-3 text-black opacity-25">
                     event_busy
                   </span>
-                  <p class="text-base font-semibold flex">
+                  <p class="text-sm font-semibold flex">
                     Channel :
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

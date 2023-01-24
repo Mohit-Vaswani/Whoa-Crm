@@ -17,6 +17,8 @@
   --gray-color: #787c84;
   --whoa2-text: #1b2d49;
   --circle-bg: #2fa285;
+  --cancel-btn: #4A5068;
+
 }
 
 /*===== BASE =====*/
@@ -288,17 +290,15 @@ p {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.modal-content{
+  width: 70%;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+
+.highlightComment {
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.cancelBtn{
+  background: var(--cancel-btn);
 }
