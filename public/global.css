@@ -17,8 +17,17 @@
   --gray-color: #787c84;
   --whoa2-text: #1b2d49;
   --circle-bg: #2fa285;
-  --cancel-btn: #4A5068;
-
+  --cancel-btn: #4a5068;
+  --taskBox: #32a84241;
+  --greenShadeOne: #0494780A;
+  --greenShadeTwo: #3EA8951F;
+  --borderGray:#E6F0EE;
+  --timeColor: #A6B1BB;
+  --taskText: #504F54;
+  --fontTen: 10px;
+  --fontSeven: 7px;
+  --fontEleven: 11px;
+  --fontThirteen: 13px;
 }
 
 /*===== BASE =====*/
@@ -31,7 +40,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: var(--normal-font-size);
   color: var(--secondary-color);
   background: var(--body-color);
@@ -81,7 +90,7 @@ p {
 .active {
   border-left: 4px solid var(--primary-color);
   color: var(--primary-color);
-  background-color: #32a84241
+  background-color: #32a84241;
 }
 
 #sidebar {
@@ -145,7 +154,6 @@ p {
   border-left: 4px solid var(--primary-color);
 }
 
-
 /* Whoa Crm 2 Css */
 
 .imp-color {
@@ -199,9 +207,9 @@ p {
   border-radius: 12px;
 }
 
-.chatBox.activeBox{
+.chatBox.activeBox {
   border: 1px solid var(--primary-color);
-  border-bottom: 1px solid rgba(36, 44, 79, 0.05);;
+  border-bottom: 1px solid rgba(36, 44, 79, 0.05);
 }
 
 .icon-width {
@@ -240,39 +248,39 @@ p {
 }
 
 .minWidth {
-  min-width: 250px !important;
+  min-width: 220px !important;
 }
 
 .highlightChat {
   border-bottom: 2px solid var(--primary-color);
 }
 
-.highlightChat p{
+.highlightChat p {
   color: var(--primary-color) !important;
 }
 
-.highlightChat .svg{
+.highlightChat .svg {
   fill: var(--primary-color) !important;
 }
 
-.chat_item{
+.chat_item {
   display: none;
 }
 
-.active-tab{
+.active-tab {
   display: block;
 }
 
-.item3{
+.item3 {
   border-radius: 20px;
 }
 
-.item3 a{
+.item3 a {
   border-radius: 30px;
   background: var(--primary-color);
 }
 
-::placeholder{
+::placeholder {
   font-size: 14px;
 }
 
@@ -286,19 +294,63 @@ p {
 
 /* The Modal (background) */
 .modal {
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
-.modal-content{
+.modal-content {
   width: 70%;
 }
-
 
 .highlightComment {
   border-bottom: 4px solid var(--primary-color);
 }
 
-.cancelBtn{
+.cancelBtn {
   background: var(--cancel-btn);
+}
+
+/* Task */
+
+.singleTask {
+  height: 642px;
+  width: 335px;
+  box-shadow: 4px 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.taskBox{
+  background: var(--taskBox);
+  color: var(--taskText);
+}
+
+.fontTen{
+  font-size: var(--fontTen);
+}
+.fontSeven{
+  font-size: var(--fontSeven);
+}
+.fontThirteen{
+  font-size: var(--fontThirteen);
+}
+.fontEleven{
+  font-size: var(--fontEleven);
+}
+
+.greenShadeOne{
+  background: var(--greenShadeOne);
+}
+.greenShadeTwo{
+  background: var(--greenShadeTwo);
+}
+
+.borderGray{
+  background: var(--borderGray);
+}
+
+.timeColor{
+  color: var(--timeColor);
+}
+
+.otherBoxHead{
+  background: var(--sidebar-color);
 }
