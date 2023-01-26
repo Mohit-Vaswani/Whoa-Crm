@@ -24,10 +24,12 @@
   --borderGray:#E6F0EE;
   --timeColor: #A6B1BB;
   --taskText: #504F54;
+  --extra-border: #F2F4F8;
   --fontTen: 10px;
   --fontSeven: 7px;
   --fontEleven: 11px;
   --fontThirteen: 13px;
+
 }
 
 /*===== BASE =====*/
@@ -353,4 +355,8 @@ p {
 
 .otherBoxHead{
   background: var(--sidebar-color);
+}
+
+.extraBorder{
+  border-top: 1px solid var(--extra-border); 
 }
