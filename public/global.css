@@ -13,6 +13,7 @@
   --login-bg: #eff6f7;
   --green-box: #04947833;
   --yellow-box: #fec41136;
+  --red-bg: #E05B5B36;
   --container-text: #364f65;
   --gray-color: #787c84;
   --whoa2-text: #1b2d49;
@@ -359,4 +360,21 @@ p {
 
 .extraBorder{
   border-top: 1px solid var(--extra-border); 
+}
+
+.red-bg {
+  background: var(--red-bg);
+}
+
+input[type=radio]#no{
+  accent-color: green;
+}
+
+input[type=radio]#yes{
+  accent-color: green;
+}
+
+.modalBorder{
+  border: 1px solid #DEE4F1;
+  border-radius: 6px;
 }
